@@ -53,7 +53,7 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "Downloading Org name data:  94%|█████████▍| 443/469 [18:23<01:00,  2.32s/it]"
+      "Downloading Org name data:  53%|█████▎    | 250/469 [10:21<09:07,  2.50s/it]"
      ]
     }
    ],

@@ -8,7 +8,7 @@ import  logging
 logging.getLogger().setLevel(logging.ERROR)
 
 
-def get_data_for_org_ids(api_key: AnyStr, org_ids: List):
+def get_summary_for_org_ids(api_key: AnyStr, org_ids: List):
     """This gets the OrgSummary for the list of OrgIds
 
     :param api_key: string of  your API id
@@ -35,7 +35,7 @@ def get_ids_for_orgs(api_key: AnyStr, org_names: List):
     for org_name in tqdm.tqdm(org_names, desc="Downloading Org name data"):
         try:
             api_return = crp.orgs.get(org_name=org_name)  # list of crap from API
-            org_id = api_return[0]['@attributes']['orgid']
+            org_id = api_return['@attributes']['orgid']
         except Exception as e:
             logging.warning(dict(org_names=org_name, exception=e))
             org_id = 0
