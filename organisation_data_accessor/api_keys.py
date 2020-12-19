@@ -1,16 +1,2 @@
-import pandas as pd
-import tqdm
-from crpapi import CRP
-
-crp = CRP(API_KEY)
-
-
-def get_data_for_org_ids(org_ids):
-    data = []
-    for org_id in tqdm.tqdm(org_ids, desc="Downloading Org Id data"):
-        data.append(crp.orgs.summary(org_id=org_id))
-    return pd.DataFrame(data)
-
-
-def get_ids_for_orgs(org_names):
-    pass
+AVI_API = "12c67c00da09f0ba7593c6c7b300e975"
+SHIW_API = "a749899287480d1f4d480041e98a1ba1"
